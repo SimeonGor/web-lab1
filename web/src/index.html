@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lab1</title>
+
+    <link href="styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div>
+            <img alt="Poo" src="img/logo.png">
+        </div>
+        <div class="student-details">
+            <span>Горюнов Семён P3230</span>
+            <span>Вариант 408481</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="graph-data">
+            <div class="graph">
+                <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- figure -->
+                    <path stroke-width="3" stroke="blue" fill="#76E2F4"
+                          d="M50 150 l 100 100 l 100 0 l 0 -100 l -50 0 a 50 50 0 0 0 -50 -50 l 0 50 Z" />
+
+                    <!-- lines -->
+                    <line stroke="black" x1="0" x2="300" y1="150" y2="150"></line>
+                    <line stroke="black" x1="150" x2="150" y1="0" y2="300"></line>
+                    <polygon fill="black" points="150,0 144,15 156,15" stroke="black"></polygon>
+                    <polygon fill="black" points="300,150 285,156 285,144" stroke="black"></polygon>
+
+                    <!-- lines on lines -->
+                    <line stroke="black" x1="200" x2="200" y1="155" y2="145"></line>
+                    <line stroke="black" x1="250" x2="250" y1="155" y2="145"></line>
+
+                    <line stroke="black" x1="50" x2="50" y1="155" y2="145"></line>
+                    <line stroke="black" x1="100" x2="100" y1="155" y2="145"></line>
+
+                    <line stroke="black" x1="145" x2="155" y1="100" y2="100"></line>
+                    <line stroke="black" x1="145" x2="155" y1="50" y2="50"></line>
+
+                    <line stroke="black" x1="145" x2="155" y1="200" y2="200"></line>
+                    <line stroke="black" x1="145" x2="155" y1="250" y2="250"></line>
+
+                    <!-- Rs and X, Y -->
+                    <text fill="black" x="195" y="140">R/2</text>
+                    <text fill="black" x="250" y="140">R</text>
+
+                    <text fill="black" x="40" y="140">-R</text>
+                    <text fill="black" x="85" y="140">-R/2</text>
+
+                    <text fill="black" x="160" y="55">R</text>
+                    <text fill="black" x="160" y="105">R/2</text>
+
+                    <text fill="black" x="160" y="204">-R/2</text>
+                    <text fill="black" x="160" y="255">-R</text>
+
+                    <text fill="black" x="285" y="140">X</text>
+                    <text fill="black" x="160" y="15">Y</text>
+
+                    <!-- dot -->
+                    <circle id="point" r="4" cx="150" cy="150" fill="black" stroke="white" visibility="hidden"/>
+                </svg>
+            </div>
+
+            <form class="coordinates-form">
+                <div class="x-input">
+                    <label>X:</label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="-2" required>-2
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="-1.5" required>-1.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="-1" required>-1
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="-0.5" required>-0.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="0" required>0
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="0.5" required>0.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="1" required>1
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="1.5" required>1.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="x" value="2" required>2
+                    </label>
+                </div>
+                <div class="y-input">
+                    <label>
+                        Y:
+                        <input id="y-field" type="text" name="y" placeholder="(-3; 5)" maxlength="14" required>
+                    </label>
+                </div>
+                <div class="r-input">
+                    <label>R:</label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="r" value="1" required>1
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="r" value="1.5" required>1.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="r" value="2" required>2
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="r" value="2.5" required>2.5
+                    </label>
+                    <label class="radio-label">
+                        <input class="radio" type="radio" name="r" value="3" required>3
+                    </label>
+                </div>
+                <button class="submit-button" type="submit">Отправить</button>
+            </form>
+        </div>
+        <div class="table">
+            <!-- check table -->
+            <table id="check" class="table-check">
+                <tr class="table-header">
+                    <th scope="col">X</th>
+                    <th scope="col">Y</th>
+                    <th scope="col">R</th>
+                    <th scope="col">Текущее время</th>
+                    <th scope="col">Время исполнения</th>
+                    <th scope="col">Результат попадания</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    background-color: #301781;
+    justify-content: space-between;
+}
+
+header img {
+    width: 100px;
+    margin: 2px;
+}
+
+img:hover {
+    transition: 0.1s;
+    border-radius: 30%;
+    border: 2px solid #76E2F4;
+    transform: scale(0.9);
+    box-shadow: 0 0 20px 2px #76E2F4;
+    margin: 0px;
+}
+
+header > div {
+    display: flex;
+    align-items: flex-end;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.student-details {
+    font-family: "fantasy", sans-serif;
+    font-size: 2em;
+    color: #F4F4EC;
+}
