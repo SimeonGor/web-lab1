@@ -10,12 +10,12 @@ public class CheckAreaController implements Controller {
 
     @Override
     public ResponseEntity<?> handle(Request request) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         boolean isHit = checkFirstQuarter(request.getX(), request.getY(), request.getR())
                 || checkSecondQuarter(request.getX(), request.getY(), request.getR())
                 || checkThirdQuarter(request.getX(), request.getY(), request.getR())
                 || checkForthQuarter(request.getX(), request.getY(), request.getR());
-        long endTime = System.currentTimeMillis();
+        long endTime = System.nanoTime();
         Response response = new Response();
         response.setX(request.getX());
         response.setY(request.getY());

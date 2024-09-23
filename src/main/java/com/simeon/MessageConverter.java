@@ -20,7 +20,7 @@ public class MessageConverter {
         try {
             return objectMapper.readValue(stringRequest, type);
         } catch (JsonProcessingException e) {
-            throw new SerializationException("Invalid deserialization", e);
+            throw new SerializationException("Invalid deserialization %s".formatted(stringRequest), e);
         }
     }
 
