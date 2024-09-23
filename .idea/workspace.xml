@@ -10,18 +10,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat: add HttpRequestParser.java">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/CheckAreaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Dispatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/styles/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/MessageConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/ErrorMassage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/ResponseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/HttpFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/SerializationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simeon/MessageConverterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simeon/view/ViewResolverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequestParser.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +46,23 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/com/fastcgi/1.0/fastcgi-1.0.jar!/com/fastcgi/FCGIInputStream.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/fastcgi/1.0/fastcgi-1.0.jar!/com/fastcgi/FCGIInterface.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/fastcgi/1.0/fastcgi-1.0.jar!/com/fastcgi/FCGIRequest.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -55,7 +78,10 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "/Users/simeongor/work/web/lab1",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -66,17 +92,116 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "android.project.structure",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.simeon" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web/src/styles" />
       <recent name="$PROJECT_DIR$/web/src" />
       <recent name="$PROJECT_DIR$/web" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.simeon.view" />
+      <recent name="com.simeon" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ViewResolverTest.shouldReturnValidHttpResponse">
+    <configuration name="CheckAreaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.CheckAreaControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckAreaControllerTest.shouldReturnIsNotHit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.CheckAreaControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturnIsNotHit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.MessageConverterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageConverterTest.shouldConvertPartialJsonToRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.MessageConverterTest" />
+      <option name="METHOD_NAME" value="shouldConvertPartialJsonToRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewResolverTest.shouldReturnValidHttpResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon.view" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.view.ViewResolverTest" />
+      <option name="METHOD_NAME" value="shouldReturnValidHttpResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ViewResolverTest.shouldReturnValidHttpResponse" />
+        <item itemvalue="JUnit.CheckAreaControllerTest" />
+        <item itemvalue="JUnit.MessageConverterTest" />
+        <item itemvalue="JUnit.CheckAreaControllerTest.shouldReturnIsNotHit" />
+        <item itemvalue="JUnit.MessageConverterTest.shouldConvertPartialJsonToRequest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,8 +216,41 @@
       <workItem from="1726048310937" duration="607000" />
       <workItem from="1726586552989" duration="636000" />
       <workItem from="1726595275952" duration="1058000" />
-      <workItem from="1726596862751" duration="8928000" />
+      <workItem from="1726596862751" duration="60652000" />
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1726761865836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726761865836</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1726761926114</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726761926114</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: add html+css+js">
+      <option name="closed" value="true" />
+      <created>1726761943828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726761943828</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: add HttpRequestParser.java">
+      <option name="closed" value="true" />
+      <created>1727092650792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727092650792</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,11 +261,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init commit" />
+    <MESSAGE value="feat: add html+css+js" />
+    <MESSAGE value="feat: add HttpRequestParser.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add HttpRequestParser.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
