@@ -10,8 +10,6 @@ public class CheckAreaController implements Controller {
 
     @Override
     public ResponseEntity<?> handle(Request request) {
-        // TODO: 23.09.2024 валидация request
-
         long startTime = System.currentTimeMillis();
         boolean isHit = checkFirstQuarter(request.getX(), request.getY(), request.getR())
                 || checkSecondQuarter(request.getX(), request.getY(), request.getR())
