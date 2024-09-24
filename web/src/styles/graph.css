@@ -1,0 +1,20 @@
+.graph {
+    margin: 30px;
+}
+
+.graph .area {
+    stroke: #615DEC;
+    fill: #76E2F4;
+}
+
+.graph #point {
+    fill: #301781;
+    stroke: #301781;
+}
+
+.graph line,
+.graph polygon,
+.graph text{
+    stroke: #301781;
+    fill: #301781;
+}

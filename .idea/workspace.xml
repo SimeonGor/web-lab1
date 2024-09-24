@@ -10,11 +10,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat: add request validation">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" afterDir="false" />
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="fix:">
+      <change afterPath="$PROJECT_DIR$/.nginx/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/ResourceNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/styles/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/styles/graph.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/styles/table.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/CheckAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/CheckAreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Dispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +37,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -82,10 +94,11 @@
       <recent name="com.simeon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/js" />
+      <recent name="$PROJECT_DIR$/web/src/html" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web/src/styles" />
       <recent name="$PROJECT_DIR$/web/src" />
-      <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -95,7 +108,7 @@
       <recent name="com.simeon" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MessageConverterTest.shouldIgnoreFieldsJsonToRequest">
     <configuration name="CheckAreaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <extension name="coverage">
@@ -142,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageConverterTest.shouldConvertPartialJsonToRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MessageConverterTest.shouldIgnoreFieldsJsonToRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <extension name="coverage">
         <pattern>
@@ -152,7 +165,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.simeon" />
       <option name="MAIN_CLASS_NAME" value="com.simeon.MessageConverterTest" />
-      <option name="METHOD_NAME" value="shouldConvertPartialJsonToRequest" />
+      <option name="METHOD_NAME" value="shouldIgnoreFieldsJsonToRequest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MessageConverterTest.shouldIgnoreFieldsJsonToRequest" />
         <item itemvalue="JUnit.ViewResolverTest.shouldReturnValidHttpResponse" />
         <item itemvalue="JUnit.CheckAreaControllerTest" />
         <item itemvalue="JUnit.MessageConverterTest" />
         <item itemvalue="JUnit.CheckAreaControllerTest.shouldReturnIsNotHit" />
-        <item itemvalue="JUnit.MessageConverterTest.shouldConvertPartialJsonToRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +210,7 @@
       <workItem from="1726048310937" duration="607000" />
       <workItem from="1726586552989" duration="636000" />
       <workItem from="1726595275952" duration="1058000" />
-      <workItem from="1726596862751" duration="63080000" />
+      <workItem from="1726596862751" duration="86562000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -255,7 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727094083599</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix: fix parsing queryString">
+      <option name="closed" value="true" />
+      <created>1727095906413</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727095906413</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix:">
+      <option name="closed" value="true" />
+      <created>1727117288052</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727117288052</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +319,9 @@
     <MESSAGE value="feat: add HttpRequestParser.java" />
     <MESSAGE value="feat: add base work implementation" />
     <MESSAGE value="feat: add request validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add request validation" />
+    <MESSAGE value="fix: fix parsing queryString" />
+    <MESSAGE value="fix:" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

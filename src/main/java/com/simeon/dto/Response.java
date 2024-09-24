@@ -13,8 +13,8 @@ public class Response {
     private double y;
     private double r;
     private boolean isHit;
-    private long workingTime;
+    private long working_time;
 
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime createdTime;
+    private LocalDateTime created_at;
 }

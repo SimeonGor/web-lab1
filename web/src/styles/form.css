@@ -1,0 +1,42 @@
+#coordinates-form {
+    background-color: #76E2F4;
+    border: 2px solid #301781;
+    display: inline-block;
+    width: 60%;
+    padding: 20px;
+    margin: auto auto auto 10%;
+}
+
+#coordinates-form>button {
+    color: #F4F4EC;
+    margin: 20px 5px 0;
+    border-radius: 5%;
+    letter-spacing: 1px;
+    display: flex;
+    text-decoration: none;
+    background-color: #615DEC;
+    border: 2px solid #301781;
+}
+
+#coordinates-form>button:hover {
+    color: #301781;
+    transition: 0.5s;
+    border: 2px solid #301781;
+    background-color: #F4F4EC;
+}
+
+#coordinates-form label {
+    margin-right: 10px;
+    font-family: "fantasy", sans-serif;
+    font-size: 1em;
+    color: #301781;
+}
+
+#coordinates-form input {
+    margin: 0.5%;
+    background-color: #F4F4EC;
+}
+
+#coordinates-form .value-input {
+    display: block flow;
+}

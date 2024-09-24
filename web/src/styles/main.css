@@ -5,46 +5,16 @@ body {
     background-color: #F4F4EC;
 }
 
-.coordinates-form {
-    background-color: #76E2F4;
-    border: 2px solid #301781;
-    padding: 20px;
-    margin: 10px;
-}
-
-.coordinates-form>button {
-    color: #F4F4EC;
-    margin: 20px 5px 0;
-    border-radius: 5%;
-    letter-spacing: 1px;
-    display: inline-block;
-    text-decoration: none;
-    background-color: #615DEC;
-    border: 2px solid #301781;
-}
-
-.coordinates-form>button:hover {
-    color: #301781;
-    transition: 0.5s;
-    border: 2px solid #301781;
-    background-color: #F4F4EC;
-}
-
-.coordinates-form>.x-input {
+main {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
-.coordinates-form .radio {
-    margin-top: 10px;
+.graph-data {
+    display: flex;
+    /*justify-content: space-around;*/
+    /*padding: 4%;*/
+    width: 80%;
 }
-
-.coordinates-form label {
-    margin-right: 10px;
-    font-family: "fantasy", sans-serif;
-    font-size: 1em;
-    color: #301781;
-}
-

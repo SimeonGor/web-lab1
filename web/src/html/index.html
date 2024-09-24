@@ -6,13 +6,18 @@
 
     <title>Lab1</title>
 
-    <link href="styles/header.css" rel="stylesheet" type="text/css" />
-    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/graph.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/table.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/form.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
         <div>
-            <img alt="Poo" src="img/logo.png">
+            <a href="https://github.com/SimeonGor">
+                <img alt="Poo" src="../img/logo.png">
+            </a>
         </div>
         <div class="student-details">
             <span>Горюнов Семён P3230</span>
@@ -25,7 +30,7 @@
             <div class="graph">
                 <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
                     <!-- figure -->
-                    <path stroke-width="3" stroke="blue" fill="#76E2F4"
+                    <path class="area" stroke-width="3"
                           d="M50 150 l 100 100 l 100 0 l 0 -100 l -50 0 a 50 50 0 0 0 -50 -50 l 0 50 Z" />
 
                     <!-- lines -->
@@ -64,63 +69,63 @@
                     <text fill="black" x="160" y="15">Y</text>
 
                     <!-- dot -->
-                    <circle id="point" r="4" cx="150" cy="150" fill="black" stroke="white" visibility="hidden"/>
+                    <circle id="point" r="4" cx="150" cy="150" visibility="hidden"/>
                 </svg>
             </div>
 
-            <form class="coordinates-form">
-                <div class="x-input">
+            <form id="coordinates-form">
+                <div id="x-input" class="value-input">
                     <label>X:</label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="-2" required>-2
+                        <input type="radio" name="x" value="-2" required>-2
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="-1.5" required>-1.5
+                        <input type="radio" name="x" value="-1.5" required>-1.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="-1" required>-1
+                        <input type="radio" name="x" value="-1" required>-1
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="-0.5" required>-0.5
+                        <input type="radio" name="x" value="-0.5" required>-0.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="0" required>0
+                        <input type="radio" name="x" value="0" required>0
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="0.5" required>0.5
+                        <input type="radio" name="x" value="0.5" required>0.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="1" required>1
+                        <input type="radio" name="x" value="1" required>1
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="1.5" required>1.5
+                        <input type="radio" name="x" value="1.5" required>1.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="x" value="2" required>2
+                        <input type="radio" name="x" value="2" required>2
                     </label>
                 </div>
-                <div class="y-input">
+                <div id="y-input" class="value-input">
                     <label>
                         Y:
                         <input id="y-field" type="text" name="y" placeholder="(-3; 5)" maxlength="14" required>
                     </label>
                 </div>
-                <div class="r-input">
+                <div id="r-input" class="value-input">
                     <label>R:</label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="r" value="1" required>1
+                        <input type="radio" name="r" value="1" required>1
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="r" value="1.5" required>1.5
+                        <input type="radio" name="r" value="1.5" required>1.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="r" value="2" required>2
+                        <input type="radio" name="r" value="2" required>2
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="r" value="2.5" required>2.5
+                        <input type="radio" name="r" value="2.5" required>2.5
                     </label>
                     <label class="radio-label">
-                        <input class="radio" type="radio" name="r" value="3" required>3
+                        <input type="radio" name="r" value="3" required>3
                     </label>
                 </div>
                 <button class="submit-button" type="submit">Отправить</button>
@@ -133,9 +138,9 @@
                     <th scope="col">X</th>
                     <th scope="col">Y</th>
                     <th scope="col">R</th>
-                    <th scope="col">Текущее время</th>
-                    <th scope="col">Время исполнения</th>
                     <th scope="col">Результат попадания</th>
+                    <th scope="col">Текущее время</th>
+                    <th scope="col">Время исполнения (нс)</th>
                 </tr>
             </table>
         </div>
@@ -144,6 +149,7 @@
     <footer>
     </footer>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

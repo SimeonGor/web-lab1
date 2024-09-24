@@ -3,11 +3,13 @@ package com.simeon;
 import com.simeon.dto.Request;
 import com.simeon.dto.Response;
 import com.simeon.dto.ResponseEntity;
+import lombok.SneakyThrows;
 
 import java.time.LocalDateTime;
 
 public class CheckAreaController implements Controller {
 
+    @SneakyThrows
     @Override
     public ResponseEntity<?> handle(Request request) {
         long startTime = System.nanoTime();
@@ -15,14 +17,14 @@ public class CheckAreaController implements Controller {
                 || checkSecondQuarter(request.getX(), request.getY(), request.getR())
                 || checkThirdQuarter(request.getX(), request.getY(), request.getR())
                 || checkForthQuarter(request.getX(), request.getY(), request.getR());
-        long endTime = System.nanoTime();
         Response response = new Response();
         response.setX(request.getX());
         response.setY(request.getY());
         response.setR(request.getR());
         response.setHit(isHit);
-        response.setCreatedTime(LocalDateTime.now());
-        response.setWorkingTime(endTime - startTime);
+        response.setCreated_at(LocalDateTime.now());
+        long endTime = System.nanoTime();
+        response.setWorking_time(endTime - startTime);
 
         return ResponseEntity.builder()
                 .body(response)
