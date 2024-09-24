@@ -3,8 +3,6 @@ package com.simeon;
 import com.simeon.exceptions.MethodNotAllowedException;
 import com.simeon.exceptions.ResourceNotFound;
 
-import java.util.Objects;
-
 public class HandlerMapping {
     private CheckAreaController controller;
 
@@ -19,8 +17,7 @@ public class HandlerMapping {
             } else {
                 throw new MethodNotAllowedException("Method are not allowed %s %s".formatted(method, uri));
             }
-        }
-        else {
+        } else {
             throw new ResourceNotFound("Resource not found %s".formatted(uri));
         }
     }

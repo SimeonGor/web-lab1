@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
@@ -23,9 +24,9 @@ class ViewResolverTest {
     @Test
     public void shouldReturnValidHttpResponse() {
         Response response = new Response();
-        response.setX(1);
-        response.setY(1.0);
-        response.setR(9);
+        response.setX(new BigDecimal("2.1"));
+        response.setY(new BigDecimal("2.5"));
+        response.setR(new BigDecimal("9"));
         response.setHit(true);
         response.setCreated_at(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
         response.setWorking_time(1234);

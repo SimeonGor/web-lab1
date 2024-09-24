@@ -3,7 +3,6 @@ package com.simeon;
 import com.simeon.dto.Request;
 import com.simeon.dto.Response;
 import com.simeon.dto.ResponseEntity;
-import lombok.SneakyThrows;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

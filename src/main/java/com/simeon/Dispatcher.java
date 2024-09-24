@@ -2,13 +2,10 @@ package com.simeon;
 
 import com.simeon.dto.ErrorMassage;
 import com.simeon.dto.ResponseEntity;
-import com.simeon.exceptions.HttpFormatException;
 import com.simeon.exceptions.MethodNotAllowedException;
 import com.simeon.exceptions.ResourceNotFound;
 import com.simeon.exceptions.SerializationException;
 import com.simeon.view.ViewResolver;
-
-import java.util.regex.Pattern;
 
 public class Dispatcher {
     private final ViewResolver viewResolver;
@@ -26,18 +23,15 @@ public class Dispatcher {
         try {
             CheckAreaController controller = handlerMapping.map(httpRequest.getMethod(), httpRequest.getUri());
             response = handlerAdapter.handle(controller, httpRequest.getBody());
-        }
-        catch (SerializationException e) {
+        } catch (SerializationException e) {
             response = ResponseEntity.builder()
                     .status(HttpStatus.BAD_REQUEST)
                     .body(new ErrorMassage(e.getMessage())).build();
-        }
-        catch (ResourceNotFound e) {
+        } catch (ResourceNotFound e) {
             response = ResponseEntity.builder()
                     .status(HttpStatus.NOT_FOUND)
                     .body(new ErrorMassage(e.getMessage())).build();
-        }
-        catch (MethodNotAllowedException  e) {
+        } catch (MethodNotAllowedException e) {
             response = ResponseEntity.builder()
                     .status(HttpStatus.METHOD_NOT_ALLOWED)
                     .body(new ErrorMassage(e.getMessage())).build();

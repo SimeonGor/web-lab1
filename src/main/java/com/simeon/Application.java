@@ -1,18 +1,10 @@
 package com.simeon;
 
 import com.fastcgi.FCGIInterface;
-import com.fastcgi.FCGIRequest;
-import com.simeon.dto.Response;
-import com.simeon.dto.ResponseEntity;
 import com.simeon.view.ViewResolver;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class Application {
-    private Dispatcher dispatcher;
+    private final Dispatcher dispatcher;
 
     public Application() {
         MessageConverter messageConverter = new MessageConverter();
@@ -42,7 +34,7 @@ public class Application {
                         System.getProperty("REQUEST_METHOD"),
                         System.getProperty("REQUEST_URI").substring(
                                 System.getProperty("CONTEXT_PREFIX").length()
-                                + System.getProperty("sun.java.command").length()
+                                        + System.getProperty("sun.java.command").length()
                         ),
                         System.getProperty("QUERY_STRING"),
                         requestBody.toString()

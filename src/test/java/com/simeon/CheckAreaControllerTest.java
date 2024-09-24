@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CheckAreaControllerTest {
@@ -20,9 +22,9 @@ class CheckAreaControllerTest {
     @Test
     public void shouldReturnIsNotHit() {
         Request request = new Request();
-        request.setY(-1);
-        request.setX(-0.9);
-        request.setR(1);
+        request.setY(new BigDecimal("-1"));
+        request.setX(new BigDecimal("-0.9"));
+        request.setR(new BigDecimal("1"));
 
         ResponseEntity<?> responseEntity = controller.handle(request);
 

@@ -12,10 +12,12 @@ import java.util.Set;
 
 public class HandlerAdapter {
     private static final Validator validator;
+
     static {
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
         validator = validatorFactory.usingContext().getValidator();
     }
+
     public MessageConverter messageConverter;
 
     public HandlerAdapter(MessageConverter messageConverter) {

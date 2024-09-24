@@ -1,18 +1,17 @@
 package com.simeon;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.simeon.dto.Request;
 import com.simeon.dto.Response;
-import com.simeon.exceptions.HttpFormatException;
 import com.simeon.exceptions.SerializationException;
 import net.javacrumbs.jsonunit.assertj.JsonAssertions;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class MessageConverterTest {
     private static MessageConverter messageConverter;
@@ -31,9 +30,9 @@ class MessageConverterTest {
                     "y": 2.5
                 }""";
         Request expected = new Request();
-        expected.setR(1.0);
-        expected.setX(2.1);
-        expected.setY(2.5);
+        expected.setR(new BigDecimal("1.0"));
+        expected.setX(new BigDecimal("2.1"));
+        expected.setY(BigDecimal.valueOf(2.5));
 
         try {
             Request actual = messageConverter.deserialize(json, Request.class);
@@ -53,9 +52,9 @@ class MessageConverterTest {
                     "additionalField": "something"
                 }""";
         Request expected = new Request();
-        expected.setR(1.0);
-        expected.setX(2.1);
-        expected.setY(2.5);
+        expected.setR(new BigDecimal("1.0"));
+        expected.setX(new BigDecimal("2.1"));
+        expected.setY(new BigDecimal("2.5"));
 
         try {
             Request actual = messageConverter.deserialize(json, Request.class);
@@ -73,9 +72,9 @@ class MessageConverterTest {
                     "y": 2.5
                 }""";
         Request expected = new Request();
-        expected.setR(0.0);
-        expected.setX(2.1);
-        expected.setY(2.5);
+        expected.setR(new BigDecimal("0.0"));
+        expected.setX(new BigDecimal("2.1"));
+        expected.setY(new BigDecimal("2.5"));
 
         try {
             Request actual = messageConverter.deserialize(json, Request.class);
@@ -88,9 +87,9 @@ class MessageConverterTest {
     @Test
     public void shouldConvertResponseToJson() {
         Response response = new Response();
-        response.setR(1.0);
-        response.setX(2.1);
-        response.setY(2.5);
+        response.setR(new BigDecimal("1.0"));
+        response.setX(new BigDecimal("2.1"));
+        response.setY(new BigDecimal("2.5"));
         response.setHit(true);
         response.setCreated_at(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
         response.setWorking_time(5000);

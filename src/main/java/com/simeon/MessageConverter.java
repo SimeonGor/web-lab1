@@ -2,14 +2,13 @@ package com.simeon;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.simeon.dto.Request;
 import com.simeon.exceptions.SerializationException;
-import lombok.SneakyThrows;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
 
 public class MessageConverter {
     public final ObjectMapper objectMapper;
+
     public MessageConverter() {
         objectMapper = new ObjectMapper();
         objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);

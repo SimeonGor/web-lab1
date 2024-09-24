@@ -11,20 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/MethodNotAllowedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/CheckAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/CheckAreaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/dto/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/styles/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/table.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +199,7 @@
       <workItem from="1726048310937" duration="607000" />
       <workItem from="1726586552989" duration="636000" />
       <workItem from="1726595275952" duration="1058000" />
-      <workItem from="1726596862751" duration="91556000" />
+      <workItem from="1726596862751" duration="92841000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -298,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727167568040</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat">
+      <option name="closed" value="true" />
+      <created>1727173303059</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727173303059</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

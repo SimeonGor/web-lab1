@@ -16,8 +16,7 @@ public class ViewResolver {
     public <T> String getHttpResponse(ResponseEntity<T> responseEntity) {
         try {
             return tryGetHttpReponse(responseEntity);
-        }
-        catch (SerializationException e) {
+        } catch (SerializationException e) {
             return getServerErrorResponse();
         }
     }
@@ -31,10 +30,10 @@ public class ViewResolver {
                 HTTP/1.1 %s
                 %sContent-Type: application/json
                 Content-Length: %d
-                
+                                
                 %s
-                
-                """.formatted(statusLine, headers,  body.getBytes(StandardCharsets.UTF_8).length, body);
+                                
+                """.formatted(statusLine, headers, body.getBytes(StandardCharsets.UTF_8).length, body);
 
     }
 
