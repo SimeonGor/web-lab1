@@ -92,8 +92,8 @@ class MessageConverterTest {
         response.setX(2.1);
         response.setY(2.5);
         response.setHit(true);
-        response.setCreatedTime(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
-        response.setWorkingTime(5000);
+        response.setCreated_at(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
+        response.setWorking_time(5000);
 
         String expectedJson = """
                 {

@@ -27,8 +27,8 @@ class ViewResolverTest {
         response.setY(1.0);
         response.setR(9);
         response.setHit(true);
-        response.setCreatedTime(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
-        response.setWorkingTime(1234);
+        response.setCreated_at(LocalDateTime.of(1995, 12, 14, 23, 43, 17));
+        response.setWorking_time(1234);
 
         String expectedJson = """
                 {

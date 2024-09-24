@@ -47,13 +47,6 @@ function serializeForm(formNode) {
     return json
 }
 
-function showHitCircle(coordinates) {
-    let scale = 200 / (2 * coordinates.r)
-    point.setAttribute("cx", 150 + (coordinates.x * scale))
-    point.setAttribute("cy",150 - (coordinates.y * scale))
-    point.setAttribute("visibility", "visible")
-}
-
 function handleFormSubmit(event) {
     event.preventDefault();
     let request = serializeForm(applicantForm)
