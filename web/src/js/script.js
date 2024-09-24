@@ -1,11 +1,21 @@
 const applicantForm = document.getElementById('coordinates-form')
+const clearButton = document.getElementById("clear-button")
 let yField = document.getElementById("y-field")
 applicantForm.addEventListener('submit', handleFormSubmit)
 yField.addEventListener("input", validYConstraint)
+clearButton.addEventListener("click", clearTable)
 const table = document.getElementById("check")
 let point = document.getElementById("point")
 
 $(document).ready(initTable)
+
+function clearTable() {
+    let table = {
+        "rows": []
+    }
+    localStorage.setItem("table", JSON.stringify(table))
+    $("td").remove()
+}
 
 function initTable() {
     if (!localStorage.getItem("table")) {
@@ -50,7 +60,6 @@ function serializeForm(formNode) {
 function handleFormSubmit(event) {
     event.preventDefault();
     let request = serializeForm(applicantForm)
-    showHitCircle(request)
 
     $.ajax({
         url: "/fcgi-bin/lab-1.jar",
@@ -58,10 +67,13 @@ function handleFormSubmit(event) {
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify(request),
-        success: handleResponse,
+        success: (response) => {
+            handleResponse(response)
+        },
         statusCode: {
                 500: () => console.log("Internal Server Error"),
                 400: () => alert("Bad Request")
+
             }
     });
 }
@@ -88,6 +100,6 @@ function addNewRowToTable(data) {
     y.innerHTML = data.y
     r.innerHTML = data.r
     hit.innerHTML = data.hit ? "Попал" : "Не попал"
-    curTime.innerHTML = data.created_at
+    curTime.innerHTML = (new Date(data.created_at)).toLocaleTimeString()
     workTime.innerHTML = data.working_time
 }

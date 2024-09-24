@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CheckAreaControllerTest {
-    private static Controller controller;
+    private static CheckAreaController controller;
 
     @BeforeAll
     public static void setUp() {

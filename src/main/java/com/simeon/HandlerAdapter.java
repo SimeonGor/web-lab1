@@ -22,7 +22,7 @@ public class HandlerAdapter {
         this.messageConverter = messageConverter;
     }
 
-    public ResponseEntity<?> handle(Controller controller, String httpRequestBody) {
+    public ResponseEntity<?> handle(CheckAreaController controller, String httpRequestBody) {
         Request request = messageConverter.deserialize(httpRequestBody, Request.class);
         Set<ConstraintViolation<Request>> validates =
                 validator.validate(request);

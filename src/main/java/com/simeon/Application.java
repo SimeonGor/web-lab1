@@ -18,7 +18,7 @@ public class Application {
         MessageConverter messageConverter = new MessageConverter();
         ViewResolver viewResolver = new ViewResolver(messageConverter);
         HandlerMapping handlerMapping = new HandlerMapping();
-        Controller controller = new CheckAreaController();
+        CheckAreaController controller = new CheckAreaController();
         handlerMapping.addController(controller);
 
         HandlerAdapter handlerAdapter = new HandlerAdapter(messageConverter);
@@ -40,7 +40,10 @@ public class Application {
 
                 HttpRequest httpRequest = new HttpRequest(
                         System.getProperty("REQUEST_METHOD"),
-                        System.getProperty("REQUEST_URI"),
+                        System.getProperty("REQUEST_URI").substring(
+                                System.getProperty("CONTEXT_PREFIX").length()
+                                + System.getProperty("sun.java.command").length()
+                        ),
                         System.getProperty("QUERY_STRING"),
                         requestBody.toString()
                 );

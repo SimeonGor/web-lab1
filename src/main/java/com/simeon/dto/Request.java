@@ -2,18 +2,21 @@ package com.simeon.dto;
 
 import lombok.Data;
 
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.math.BigDecimal;
 
 @Data
 public class Request {
-    @Min(-2)
-    @Max(2)
-    private double x;
-    @Min(-3)
-    @Max(5)
-    private double y;
-    @Min(1)
-    @Max(3)
-    private double r;
+    @DecimalMin("-2.0")
+    @DecimalMax("2")
+    private BigDecimal x;
+    @DecimalMin("-3")
+    @DecimalMax("5")
+    private BigDecimal y;
+    @DecimalMin("1")
+    @DecimalMax("3")
+    private BigDecimal r;
 }
