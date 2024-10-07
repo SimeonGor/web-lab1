@@ -1,0 +1,26 @@
+services:
+  nginx:
+    container_name: lab1-nginx
+    hostname: localhost
+    image: nginx:1.19.1
+    ports:
+      - "80:28006"
+    volumes:
+      - .nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./web/src:/usr/share/nginx
+    depends_on:
+      - fcgi-java
+  fcgi-java:
+    container_name: fcgi-java
+    hostname: fcgi-java
+    build: .
+    command: java -DFCGI_PORT=28007 -jar lab-1.jar
+    ports:
+      - "28007:28007"
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
