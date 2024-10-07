@@ -2,7 +2,11 @@ package com.simeon;
 
 import com.fastcgi.FCGIInterface;
 import com.simeon.view.ViewResolver;
+import lombok.extern.java.Log;
 
+import java.util.logging.Level;
+
+@Log
 public class Application {
     private final Dispatcher dispatcher;
 
@@ -29,11 +33,12 @@ public class Application {
                     requestBody.append((char) c);
                     c = System.in.read();
                 }
+                String requestUri = System.getProperty("REQUEST_URI");
+                int index = requestUri.indexOf(System.getProperty("sun.java.command"));
 
                 HttpRequest httpRequest = new HttpRequest(
                         System.getProperty("REQUEST_METHOD"),
-                        System.getProperty("REQUEST_URI").substring(
-                                System.getProperty("CONTEXT_PREFIX").length()
+                        requestUri.substring(index
                                         + System.getProperty("sun.java.command").length()
                         ),
                         System.getProperty("QUERY_STRING"),
@@ -45,7 +50,7 @@ public class Application {
                 System.out.println(httpResponse);
 
             } catch (Exception e) {
-                throw new RuntimeException();
+                log.log(Level.SEVERE, e.getMessage());
             }
         }
     }
