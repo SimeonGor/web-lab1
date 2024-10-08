@@ -4,6 +4,7 @@ import com.fastcgi.FCGIInterface;
 import com.simeon.view.ViewResolver;
 import lombok.extern.java.Log;
 
+import java.util.Properties;
 import java.util.logging.Level;
 
 @Log
@@ -33,15 +34,16 @@ public class Application {
                     requestBody.append((char) c);
                     c = System.in.read();
                 }
-                String requestUri = System.getProperty("REQUEST_URI");
-                int index = requestUri.indexOf(System.getProperty("sun.java.command"));
+                Properties properties = FCGIInterface.request.params;
+                String requestUri = properties.getProperty("REQUEST_URI");
+                int index = requestUri.indexOf(properties.getProperty("sun.java.command"));
 
                 HttpRequest httpRequest = new HttpRequest(
-                        System.getProperty("REQUEST_METHOD"),
+                        properties.getProperty("REQUEST_METHOD"),
                         requestUri.substring(index
                                         + System.getProperty("sun.java.command").length()
                         ),
-                        System.getProperty("QUERY_STRING"),
+                        properties.getProperty("QUERY_STRING"),
                         requestBody.toString()
                 );
 

@@ -10,10 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/MessageConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/MessageConverterTest.java" afterDir="false" />
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="fix: error http status">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/js/jquery_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/js/jquery_script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +232,7 @@
       <workItem from="1727606771326" duration="481000" />
       <workItem from="1727688363314" duration="10226000" />
       <workItem from="1728234089446" duration="16050000" />
-      <workItem from="1728303853514" duration="31689000" />
+      <workItem from="1728303853514" duration="32605000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -380,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728378904027</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix: error http status">
+      <option name="closed" value="true" />
+      <created>1728381836741</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728381836741</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +430,8 @@
     <MESSAGE value="feat: update front-end" />
     <MESSAGE value="feat: update conf" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="fix: error http status" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: error http status" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
