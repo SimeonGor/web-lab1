@@ -11,8 +11,6 @@ import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ViewResolverTest {
     private static ViewResolver viewResolver;
 
@@ -45,7 +43,7 @@ class ViewResolverTest {
                 HTTP/1.1 200 OK
                 Content-Type: application/json
                 Content-Length: %d
-                                
+                
                 %s
                 
                 """.formatted(expectedJson.getBytes(StandardCharsets.UTF_8).length, expectedJson);

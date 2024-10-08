@@ -5,14 +5,11 @@ import lombok.Getter;
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
 public class HttpRequest {
-    @Getter
     private final String uri;
-    @Getter
     private final String method;
-    @Getter
     private final Map<String, String> queryParameters = new HashMap<>();
-    @Getter
     private final String body;
 
 

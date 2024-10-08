@@ -10,18 +10,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="fix: change uri logic">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/js/jquery_script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/js/old_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat: update conf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/.nginx/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/styles/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/styles/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/HttpFormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/view/ViewResolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/view/ViewResolverTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/js/old_script.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SimeonGor"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SimeonGor/web-lab1.git",
+    "accountId": "f97afcb8-30b2-410b-ac9c-5d488d12047b"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/com/fastcgi/1.0/fastcgi-1.0.jar!/com/fastcgi/FCGIInputStream.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/com/fastcgi/1.0/fastcgi-1.0.jar!/com/fastcgi/FCGIInterface.class" root0="SKIP_INSPECTION" />
@@ -223,7 +234,7 @@
       <workItem from="1727606771326" duration="481000" />
       <workItem from="1727688363314" duration="10226000" />
       <workItem from="1728234089446" duration="16050000" />
-      <workItem from="1728303853514" duration="27116000" />
+      <workItem from="1728303853514" duration="28808000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -345,7 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728308109459</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: update front-end">
+      <option name="closed" value="true" />
+      <created>1728376571551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728376571551</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: update conf">
+      <option name="closed" value="true" />
+      <created>1728376578539</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728376578539</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +413,9 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="feat: add docker-compose" />
     <MESSAGE value="fix: change uri logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: change uri logic" />
+    <MESSAGE value="feat: update front-end" />
+    <MESSAGE value="feat: update conf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update conf" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

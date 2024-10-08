@@ -30,9 +30,9 @@ public class ViewResolver {
                 HTTP/1.1 %s
                 %sContent-Type: application/json
                 Content-Length: %d
-                                
+                
                 %s
-                                
+                
                 """.formatted(statusLine, headers, body.getBytes(StandardCharsets.UTF_8).length, body);
 
     }

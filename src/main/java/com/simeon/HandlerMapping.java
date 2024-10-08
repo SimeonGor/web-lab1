@@ -11,7 +11,7 @@ public class HandlerMapping {
     }
 
     public CheckAreaController map(String method, String uri) {
-        if (uri.equals("")) {
+        if (uri.isEmpty()) {
             if (method.equals("POST")) {
                 return controller;
             } else {

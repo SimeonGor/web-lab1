@@ -3,7 +3,6 @@ package com.simeon;
 import com.simeon.dto.Request;
 import com.simeon.dto.Response;
 import com.simeon.dto.ResponseEntity;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
