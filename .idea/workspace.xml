@@ -10,11 +10,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat">
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="fix: change uri logic">
       <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/js/jquery_script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/js/old_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/.nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/styles/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/styles/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/table.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +32,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -64,6 +70,8 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/simeongor/work/web/lab1",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -74,6 +82,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -83,11 +92,11 @@
       <recent name="com.simeon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src" />
       <recent name="$PROJECT_DIR$/web/src/js" />
       <recent name="$PROJECT_DIR$/web/src/html" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web/src/styles" />
-      <recent name="$PROJECT_DIR$/web/src" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -186,6 +195,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -199,7 +216,14 @@
       <workItem from="1726048310937" duration="607000" />
       <workItem from="1726586552989" duration="636000" />
       <workItem from="1726595275952" duration="1058000" />
-      <workItem from="1726596862751" duration="92841000" />
+      <workItem from="1726596862751" duration="97063000" />
+      <workItem from="1727604664388" duration="160000" />
+      <workItem from="1727606033629" duration="521000" />
+      <workItem from="1727606564749" duration="23000" />
+      <workItem from="1727606771326" duration="481000" />
+      <workItem from="1727688363314" duration="10226000" />
+      <workItem from="1728234089446" duration="16050000" />
+      <workItem from="1728303853514" duration="27116000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -297,7 +321,31 @@
       <option name="project" value="LOCAL" />
       <updated>1727173303059</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1727174634712</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727174634712</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: add docker-compose">
+      <option name="closed" value="true" />
+      <created>1728308084340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728308084340</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: change uri logic">
+      <option name="closed" value="true" />
+      <created>1728308109459</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728308109459</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +383,10 @@
     <MESSAGE value="fix: fix parsing queryString" />
     <MESSAGE value="fix:" />
     <MESSAGE value="feat" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="feat: add docker-compose" />
+    <MESSAGE value="fix: change uri logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: change uri logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
