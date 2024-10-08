@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lab1</title>
+
+    <link href="styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/graph.css" rel="stylesheet" type="text/css" />
+    <link href="styles/table.css" rel="stylesheet" type="text/css" />
+    <link href="styles/form.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="https://github.com/SimeonGor">
+                <img alt="Poo" src="img/logo.png">
+            </a>
+        </div>
+        <div class="student-details">
+            <span>Горюнов Семён P3230</span>
+            <span>Вариант 408481</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="graph-data">
+            <div class="graph">
+                <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- figure -->
+                    <path class="area" stroke-width="3"
+                          d="M50 150 l 100 100 l 100 0 l 0 -100 l -50 0 a 50 50 0 0 0 -50 -50 l 0 50 Z" />
+
+                    <!-- lines -->
+                    <line stroke="black" x1="0" x2="300" y1="150" y2="150"></line>
+                    <line stroke="black" x1="150" x2="150" y1="0" y2="300"></line>
+                    <polygon fill="black" points="150,0 144,15 156,15" stroke="black"></polygon>
+                    <polygon fill="black" points="300,150 285,156 285,144" stroke="black"></polygon>
+
+                    <!-- lines on lines -->
+                    <line stroke="black" x1="200" x2="200" y1="155" y2="145"></line>
+                    <line stroke="black" x1="250" x2="250" y1="155" y2="145"></line>
+
+                    <line stroke="black" x1="50" x2="50" y1="155" y2="145"></line>
+                    <line stroke="black" x1="100" x2="100" y1="155" y2="145"></line>
+
+                    <line stroke="black" x1="145" x2="155" y1="100" y2="100"></line>
+                    <line stroke="black" x1="145" x2="155" y1="50" y2="50"></line>
+
+                    <line stroke="black" x1="145" x2="155" y1="200" y2="200"></line>
+                    <line stroke="black" x1="145" x2="155" y1="250" y2="250"></line>
+
+                    <!-- Rs and X, Y -->
+                    <text fill="black" x="195" y="140">R/2</text>
+                    <text fill="black" x="250" y="140">R</text>
+
+                    <text fill="black" x="40" y="140">-R</text>
+                    <text fill="black" x="85" y="140">-R/2</text>
+
+                    <text fill="black" x="160" y="55">R</text>
+                    <text fill="black" x="160" y="105">R/2</text>
+
+                    <text fill="black" x="160" y="204">-R/2</text>
+                    <text fill="black" x="160" y="255">-R</text>
+
+                    <text fill="black" x="285" y="140">X</text>
+                    <text fill="black" x="160" y="15">Y</text>
+                </svg>
+            </div>
+
+            <form id="coordinates-form">
+                <div id="x-input" class="value-input">
+                    <div>
+                        <label>X:</label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="-2" required>-2
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="-1.5" required>-1.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="-1" required>-1
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="-0.5" required>-0.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="0" required>0
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="0.5" required>0.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="1" required>1
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="1.5" required>1.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="x" value="2" required>2
+                        </label>
+                    </div>
+                </div>
+                <div id="y-field" class="value-input">
+                    <label>
+                        Y:
+                        <input id="y-input" type="text" name="y" placeholder="(-3; 5)" maxlength="30" autocomplete="off" required>
+                    </label>
+                </div>
+                <div id="r-input" class="value-input">
+                    <div>
+                        <label>R:</label>
+                        <label class="radio-label">
+                            <input type="radio" name="r" value="1" required>1
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="r" value="1.5" required>1.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="r" value="2" required>2
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="r" value="2.5" required>2.5
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="r" value="3" required>3
+                        </label>
+                    </div>
+                </div>
+                <button class="submit-button" type="submit">Отправить</button>
+                <button id="clear-button" type="button">Отчистить таблицу</button>
+            </form>
+        </div>
+        <div class="table">
+            <!-- check table -->
+            <table id="check-table" class="table-check">
+                <thead>
+                    <tr>
+                        <th scope="col">X</th>
+                        <th scope="col">Y</th>
+                        <th scope="col">R</th>
+                        <th scope="col">Результат попадания</th>
+                        <th scope="col">Время отправки</th>
+                        <th scope="col">Время исполнения (нс)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery_script.js"></script>
+</body>
+</html>
