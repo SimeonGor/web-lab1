@@ -110,8 +110,16 @@ function handleFormSubmit(event) {
         dataType: "json",
         data: requestBody,
         success: handleResponse,
-        error: function (jqxhr, txt_status, err_thr) {
-            alert("Error: " + txt_status + ", " + err_thr);
+        statusCode: {
+            400: () => {
+                alert("проверь ввод");
+                },
+            404: () => { // выполнить функцию если код ответа HTTP 404
+                alert( "страница не найдена" );
+            },
+            405: () => { // выполнить функцию если код ответа HTTP 403
+                alert( "доступ запрещен" );
+            }
         }
     });
 }

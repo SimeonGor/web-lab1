@@ -69,7 +69,8 @@ class MessageConverterTest {
         String json = """
                 {
                     "x": 2.1,
-                    "y": 2.5
+                    "y": 2.5,
+                    "r": 0.0
                 }""";
         Request expected = new Request();
         expected.setR(new BigDecimal("0.0"));

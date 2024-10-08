@@ -10,17 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="feat: update conf">
+    <list default="true" id="7475f61c-0c10-4797-a67d-cab9ac3c05a5" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HandlerMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/HttpStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/exceptions/HttpFormatException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simeon/view/ViewResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/CheckAreaControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/view/ViewResolverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/view/ViewResolverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/js/old_script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/simeon/MessageConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/simeon/MessageConverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/js/jquery_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/js/jquery_script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +57,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -75,6 +72,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.CheckAreaControllerTest.executor": "Run",
+    "JUnit.MessageConverterTest.executor": "Run",
+    "JUnit.MessageConverterTest.shouldConvertPartialJsonToRequest.executor": "Run",
+    "JUnit.ViewResolverTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -117,7 +118,7 @@
       <recent name="com.simeon" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MessageConverterTest.shouldIgnoreFieldsJsonToRequest">
+  <component name="RunManager" selected="JUnit.MessageConverterTest.shouldConvertPartialJsonToRequest">
     <configuration name="CheckAreaControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <extension name="coverage">
@@ -133,22 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckAreaControllerTest.shouldReturnIsNotHit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.simeon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.simeon" />
-      <option name="MAIN_CLASS_NAME" value="com.simeon.CheckAreaControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturnIsNotHit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MessageConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <extension name="coverage">
@@ -160,6 +145,22 @@
       <option name="PACKAGE_NAME" value="com.simeon" />
       <option name="MAIN_CLASS_NAME" value="com.simeon.MessageConverterTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageConverterTest.shouldConvertPartialJsonToRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simeon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simeon" />
+      <option name="MAIN_CLASS_NAME" value="com.simeon.MessageConverterTest" />
+      <option name="METHOD_NAME" value="shouldConvertPartialJsonToRequest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,7 +181,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewResolverTest.shouldReturnValidHttpResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ViewResolverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <extension name="coverage">
         <pattern>
@@ -190,19 +191,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.simeon.view" />
       <option name="MAIN_CLASS_NAME" value="com.simeon.view.ViewResolverTest" />
-      <option name="METHOD_NAME" value="shouldReturnValidHttpResponse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MessageConverterTest.shouldIgnoreFieldsJsonToRequest" />
-        <item itemvalue="JUnit.ViewResolverTest.shouldReturnValidHttpResponse" />
-        <item itemvalue="JUnit.CheckAreaControllerTest" />
+        <item itemvalue="JUnit.MessageConverterTest.shouldConvertPartialJsonToRequest" />
         <item itemvalue="JUnit.MessageConverterTest" />
-        <item itemvalue="JUnit.CheckAreaControllerTest.shouldReturnIsNotHit" />
+        <item itemvalue="JUnit.CheckAreaControllerTest" />
+        <item itemvalue="JUnit.ViewResolverTest" />
+        <item itemvalue="JUnit.MessageConverterTest.shouldIgnoreFieldsJsonToRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +234,7 @@
       <workItem from="1727606771326" duration="481000" />
       <workItem from="1727688363314" duration="10226000" />
       <workItem from="1728234089446" duration="16050000" />
-      <workItem from="1728303853514" duration="28808000" />
+      <workItem from="1728303853514" duration="31689000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -372,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728376578539</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1728378904027</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1728378904027</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +423,8 @@
     <MESSAGE value="fix: change uri logic" />
     <MESSAGE value="feat: update front-end" />
     <MESSAGE value="feat: update conf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update conf" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
